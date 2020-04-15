@@ -1,0 +1,19 @@
+hm:=hello makefile
+
+override var:=overriade-test
+
+define foo
+I'm fool!
+endef
+
+override define cmd
+	@echo "run cmd is ..."
+	@ls
+endef
+
+test:
+	@echo "hm => $(hm)"
+	@echo "var => $(var)"
+	@echo "foo => $(foo)"
+	${cmd}
+
