@@ -1,9 +1,9 @@
-hello.out:func.o main.o
-	gcc -o hello.out func.o main.o
-func.o:func.c
-	gcc -o func.o -c func.c
-main.o:main.c
-	gcc -o main.o -c main.c
-clean:FORCE
-	rm *.o hello.out
-FORCE:
+.PHNOY:test1 test2
+ZHUXINRAN:=Zhuxinran
+zhuxinransoftware := D.T.
+test1:
+	@echo "$(MAKE_VERSION)"
+	@echo "$(CURDIR)"
+	@echo "$(.VARIABLES)"
+test2:
+	@echo "$(RM)"

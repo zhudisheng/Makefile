@@ -1,12 +1,17 @@
-hello.out:func.o main.o
-	gcc -o hello.out func.o main.o
-func.o:func.c
-	gcc -o func.o -c func.c
-main.o:main.c
-	gcc -o main.o -c main.c
-.PHONY:rebuild clean all
+.PHONY:all_out first second third test
 
-rebuild:clean all
-all:hello.out
-clean:
-	rm *.o hello.out
+all_out:
+	@echo "$(MAKE)"
+	@echo "$(MAKECMDGOALS)"
+	@echo "$(MAKEFILE_LIST)"
+first:
+	@echo "first"
+second:
+	@echo "second"
+third:
+	@echo "third"
+test:
+	@$(MAKE) first
+	@$(MAKE) second
+	@$(MAKE) third
+
